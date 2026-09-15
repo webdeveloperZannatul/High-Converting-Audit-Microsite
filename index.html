@@ -1,0 +1,606 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Audit — Professional Website Auditing | Performance, SEO, UX, AEO, GA4 & Ads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --ink:#131A17; --ink-2:#1E2823; --ink-3:#2A3530;
+  --cream:#FAF7F1; --cream-2:#F3EFE7; --paper:#FFFDF9;
+  --moss:#33503F; --moss-deep:#22362B;
+  --sage:#9CAF9E; --amber:#C9A15A; --amber-soft:#E7D3B3;
+  --line:rgba(19,26,23,.10); --line-light:rgba(250,247,241,.14);
+}
+*{-webkit-font-smoothing:antialiased}
+body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
+.serif{font-family:'Fraunces',serif}
+::selection{background:var(--amber);color:var(--ink)}
+.eyebrow{letter-spacing:.32em;text-transform:uppercase;font-size:.72rem;font-weight:600}
+.card-soft{box-shadow:0 1px 2px rgba(19,26,23,.05),0 24px 48px -24px rgba(19,26,23,.25)}
+.card-lift{transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s cubic-bezier(.2,.8,.2,1)}
+.card-lift:hover{transform:translateY(-6px)}
+.hairline{border:1px solid var(--line)}
+.grain::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(250,247,241,.05) 1px,transparent 1px);background-size:4px;pointer-events:none;opacity:.35}
+.btn-primary{background:var(--ink);color:var(--cream)}
+.btn-primary:hover{background:var(--moss)}
+.ring-fg{stroke:var(--amber)}
+.tick{color:var(--amber)}
+.faq-q{border-bottom:1px solid var(--line)}
+input,textarea{font-family:'Inter',sans-serif}
+.chip{border:1px solid var(--line)}
+.display{font-feature-settings:"ss01","cv11";letter-spacing:-.03em}
+.serif em{font-style:italic;color:var(--amber)}
+.no-scrollbar::-webkit-scrollbar{display:none}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-[rgba(19,26,23,.88)] text-[var(--cream)] border-b border-white/5">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-5 h-[72px]">
+    <a href="#home" class="flex items-center gap-3" aria-label="Atlas Audit home">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-label="Atlas Audit logo">
+        <rect width="34" height="34" rx="10" fill="#C9A15A"/>
+        <path d="M10 24V10h9a4.5 4.5 0 0 1 0 9h-5" stroke="#131A17" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="2.2" fill="#131A17"/>
+      </svg>
+      <span class="leading-[1.05]">
+        <span class="serif text-[17px] tracking-[-0.02em] block">Atlas Audit</span>
+        <span class="text-[10px] tracking-[.3em] uppercase text-white/50 block">Web Intelligence</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-[13px] font-medium" aria-label="Primary">
+       <a href="#home" class="text-[var(--amber)] border-b-2 border-[var(--amber)] pb-1">Home</a>
+      <a href="#services" class="text-white/60 hover:text-white transition">Services</a>
+      <a href="#process" class="text-white/60 hover:text-white transition">Process</a>
+      <a href="#pricing" class="text-white/60 hover:text-white transition">Pricing</a>
+      <a href="#results" class="text-white/60 hover:text-white transition">Results</a>
+      <a href="#faq" class="text-white/60 hover:text-white transition">FAQ</a>
+    </nav>
+    <a href="#checkout" class="group flex items-center gap-3 rounded-full bg-[var(--cream)] text-[var(--ink)] pl-5 pr-2 py-2 text-[13px] font-semibold transition hover:bg-[var(--amber)]">
+      Buy Audit
+      <span class="grid size-8 place-items-center rounded-full bg-[var(--ink)] text-[var(--cream)] transition group-hover:bg-[var(--ink)] group-hover:text-[var(--cream)]"><i class="fa-arrow-up-right text-[12px]"></i></span>
+    </a>
+  </div>
+</header>
+
+<main>
+<!-- ============ PAGE 1 · HOME HERO ============ -->
+<section id="home" class="relative grain overflow-hidden bg-[var(--ink)] text-[var(--cream)]">
+  <!-- Realistic background image -->
+  <div class="absolute inset-0">
+    <img src="https://www.ldconsulting.be/images/services-audit-interface-generated.jpg?w=1600&q=80" alt="Professional audit dashboard with analytics on a laptop in a calm workspace" class="size-full object-cover grayscale">
+    <div class="absolute inset-0 bg-gradient-to-r from-[rgba(19,26,23,.96)] via-[rgba(19,26,23,.82)] to-[rgba(19,26,23,.28)]"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[var(--ink)] via-transparent to-[rgba(19,26,23,.6)]"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-5 pt-16 pb-20 md:pt-24 md:pb-28">
+    <div class="flex items-center gap-4">
+      <a href="#results" class="eyebrow text-[var(--amber)]">Page 01 · Home — The Audit, Evidence-led</a>
+      <span class="h-px flex-1 bg-gradient-to-r from-[var(--amber)] to-transparent"></span>
+    </div>
+
+    <h1 class="serif display text-[clamp(2.9rem,6.4vw,5.6rem)] leading-[.98] mt-6">
+      Your website isn’t broken.<br><em>It’s just unmeasured.</em>
+    </h1>
+    <p class="max-w-[46ch] text-white/60 text-[15px] md:text-[17px] leading-7 mt-6">
+      Atlas Audit turns your site into evidence. We read performance, SEO, UX, AEO, GA4 and Ads the way an engineer reads code — then hand you a prioritized, priced, 90-day action plan. No dashboards you’ll never open.
+    </p>
+
+    <div class="flex flex-wrap gap-4 mt-9">
+      <a href="#pricing" class="btn-primary group rounded-full px-9 py-5 text-sm font-semibold flex items-center gap-3 ring-1 ring-white/10 relative overflow-hidden">
+        <span class="absolute inset-0 bg-gradient-to-r from-[#C9A15A]/30 to-transparent opacity-70"></span>
+        <span class="relative">Buy Audit <span class="text-[var(--amber)]">— from £240</span></span>
+        <i class="fa-arrow-right relative transition-transform group-hover:translate-x-1"></i>
+      </a>
+      <a href="#checkout" class="rounded-full border border-white/15 bg-white/5 backdrop-blur px-9 py-5 text-sm font-semibold text-white transition hover:bg-white/10 flex items-center gap-3">
+        <span class="size-2 rounded-full bg-emerald-400 animate-pulse"></span> Book a free 15-min call
+      </a>
+    </div>
+
+    <!-- trust row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden hairline !border-white/10 mt-14" id="trust">
+      <div class="p-6 bg-[rgba(19,26,23,.6)] backdrop-blur">
+        <p class="serif text-4xl">412</p>
+        <p class="text-xs uppercase tracking-[.2em] text-white/50 mt-2">Audits delivered since 2016</p>
+      </div>
+      <div class="p-6 bg-[rgba(19,26,23,.6)] backdrop-blur">
+        <p class="serif text-4xl">31%</p>
+        <p class="text-xs uppercase tracking-[.2em] text-white/50 mt-2">Median LCP improvement, year one</p>
+      </div>
+      <div class="p-6 bg-[rgba(19,26,23,.6)] backdrop-blur">
+        <p class="serif text-4xl">4.9<span class="text-[var(--amber)]">.</span></p>
+        <p class="text-xs uppercase tracking-[.2em] text-white/50 mt-2">9.2k reviews · Capterra &amp; Upwork</p>
+      </div>
+      <div class="p-6 bg-[var(--amber)] text-[var(--ink)]">
+        <p class="serif text-4xl">14d</p>
+        <p class="text-xs uppercase tracking-[.2em] mt-2 opacity-70">Standard turnaround — your evidence PDF in hand</p>
+      </div>
+    </div>
+
+    <!-- live audit artifact -->
+    <div class="mt-6 grid md:grid-cols-[1.2fr_1fr] gap-6">
+      <div class="rounded-3xl overflow-hidden hairline !border-white/10 bg-[#18211D] card-soft">
+        <div class="flex items-center gap-2 px-5 py-4 border-b border-white/5">
+          <span class="size-3 rounded-full bg-[#E06C5B]"></span><span class="size-3 rounded-full bg-[#E4C070]"></span><span class="size-3 rounded-full bg-[#7FB285]"></span>
+          <span class="ml-4 text-xs text-white/50">atlas.audit/preview/acme-skincare.co — report 24-B</span>
+        </div>
+        <div class="p-6 grid sm:grid-cols-3 gap-5">
+          <div class="rounded-2xl bg-white/5 p-5">
+            <p class="text-[11px] uppercase tracking-[.25em] text-white/40">LCP · Mobile</p>
+            <p class="serif text-3xl mt-2">4.8<span class="text-base text-white/50">s</span></p>
+            <div class="h-1.5 w-full rounded-full bg-white/10 mt-4"><div class="h-1.5 rounded-full bg-[#E06C5B]" style="width:78%"></div></div>
+          </div>
+          <div class="rounded-2xl bg-white/5 p-5">
+            <p class="text-[11px] uppercase tracking-[.25em] text-white/40">Structured data</p>
+            <p class="serif text-3xl mt-2">11</p>
+            <p class="text-xs text-[var(--amber)] mt-3">▲ 6 found &amp; prioritized</p>
+          </div>
+          <div class="rounded-2xl bg-gradient-to-b from-[#33503F] to-[#22362B] p-5 ring-1 ring-[var(--amber)]/40">
+            <p class="text-[11px] uppercase tracking-[.25em] text-[#E7D3B3]">Verdict</p>
+            <p class="serif italic text-2xl mt-2 leading-tight">“Recover +31% revenue, fix SEO first.”</p>
+            <a href="#checkout" class="inline-block mt-4 rounded-full bg-[var(--amber)] text-[var(--ink)] text-xs font-bold px-5 py-3 uppercase tracking-[.2em]">Buy the full read</a>
+          </div>
+        </div>
+      </div>
+      <!-- performance ring -->
+      <div class="rounded-3xl bg-[linear-gradient(135deg,#22362B,#131A17)] p-7 hairline !border-white/10 card-soft flex flex-col items-center justify-center text-center">
+        <svg width="220" height="220" viewBox="0 0 200 200" role="img" aria-label="Performance score 42 before, 91 after">
+          <circle cx="100" cy="100" r="84" fill="none" stroke="rgba(250,247,241,.08)" stroke-width="12"/>
+          <circle cx="100" cy="100" r="84" fill="none" stroke="#C9A15A" stroke-width="12" stroke-linecap="round" stroke-dasharray="527.8" stroke-dashoffset="160" transform="rotate(-90 100 100)"/>
+          <text x="100" y="96" text-anchor="middle" fill="#FAF7F1" font-family="Fraunces" font-size="44">69</text>
+          <text x="100" y="118" text-anchor="middle" fill="rgba(250,247,241,.5)" font-size="10" letter-spacing="3">PERFORMANCE /100</text>
+        </svg>
+        <h2 class="serif text-2xl mt-4">Before → after, measured — not guessed.</h2>
+        <p class="text-sm text-white/50 mt-3 max-w-[32ch]">Every audit ends with a re-grade. Clients see the exact score we predicted we could move, and we re-measure free at day 90.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIX SERVICES ============ -->
+<section id="services" class="px-5 py-16 md:py-24 bg-[var(--cream)]">
+  <div class="max-w-6xl mx-auto">
+    <header class="flex flex-wrap items-end justify-between gap-6">
+      <div>
+        <p class="eyebrow text-[var(--amber)]">Services · Page 02, above the fold</p>
+        <h2 class="serif display text-[clamp(1.9rem,3.6vw,3.2rem)] leading-[1] mt-3">Six disciplines. One evidence.</h2>
+      </div>
+      <a href="#services-detail" class="rounded-full border border-[var(--line)] px-7 py-4 text-sm font-semibold bg-[var(--paper)]">Open full services →</a>
+    </header>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10" id="svc"><!-- filled by script --></div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="px-5 pb-20 bg-[var(--cream-2)]">
+  <div class="max-w-6xl mx-auto rounded-[32px] bg-[var(--ink)] text-[var(--cream)] p-7 md:p-12 card-soft relative overflow-hidden grain">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <h2 class="serif display text-[clamp(1.6rem,3vw,2.6rem)] leading-[1.02]">How an audit actually works. No kickoff theater.</h2>
+      <a href="#checkout" class="text-[var(--amber)] text-sm font-semibold">See the exact 14-day timeline ↓</a>
+    </div>
+    <div class="grid md:grid-cols-4 gap-4 mt-8" id="steps"></div>
+  </div>
+</section>
+
+<!-- ============ PRICING (Page 3 preview) ============ -->
+<section id="pricing" class="px-5 py-16 md:py-24">
+  <div class="max-w-6xl mx-auto">
+    <p class="eyebrow text-[var(--amber)]">Pricing · Page 03</p>
+    <h2 class="serif display text-[clamp(1.9rem,3.4vw,3rem)] mt-3 leading-none">Three tiers. Zero surprise line items.</h2>
+    <div class="grid lg:grid-cols-3 gap-6 mt-10">
+
+      <a href="#checkout" class="rounded-[28px] bg-[var(--paper)] p-7 hairline card-soft card-lift flex flex-col">
+        <h3 class="text-sm uppercase tracking-[.25em] text-[#5B6B60]">Diagnostic</h3>
+        <p class="serif text-5xl mt-4">£240<span class="text-base text-[#5B6B60]"> / fixed</span></p>
+        <ul class="mt-7 space-y-4 text-sm text-[#33413A]">
+          <li class="flex gap-3"><i class="fa-check tick"></i> Performance deep-dive</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> 1-section SEO + on-page report</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> 12-slide PDF report, 90-day roadmap</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> Checklist + technical quick-win list</li>
+        </ul>
+        <span class="mt-8 text-center rounded-full border border-[var(--ink)] py-4 text-sm font-semibold">Choose Diagnostic</span>
+      </a>
+
+      <a href="#checkout" aria-label="Recommended Plan — Atlas Standard" class="relative rounded-[28px] bg-[var(--moss)] text-[var(--cream)] p-7 card-soft card-lift ring-1 ring-[var(--amber)]/50 flex flex-col">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[var(--amber)] text-[var(--ink)] px-4 py-2 text-[11px] font-bold uppercase tracking-[.2em]">Recommended · 78% choose this</span>
+        <h3 class="text-sm uppercase tracking-[.25em] text-[#E7D3B3] pt-3">Standard Audit</h3>
+        <p class="serif text-5xl mt-4">£480<span class="text-base text-white/50"> / fixed</span></p>
+        <ul class="mt-7 space-y-4 text-sm">
+          <li class="flex gap-3"><i class="fa-check tick"></i> All six disciplines, full stack</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> GA4 + annotated analytics teardown</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> UX heat-strip + wireframe rehearsal</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> AEO + SERP feature review</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> 45-min live walkthrough call</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> 6-month prioritized implementation plan</li>
+        </ul>
+        <span class="mt-8 text-center rounded-full bg-[var(--amber)] text-[var(--ink)] py-4 text-sm font-bold">Buy Standard — £480</span>
+      </a>
+
+      <a href="#checkout" class="rounded-[28px] bg-[var(--ink)] text-[var(--cream)] p-7 hairline card-soft card-lift flex flex-col">
+        <h3 class="text-sm uppercase tracking-[.25em] text-[var(--sage)]">Revenue Partner</h3>
+        <p class="serif text-5xl mt-4">£940<span class="text-base text-white/40"> / quarter</span></p>
+        <ul class="mt-7 space-y-4 text-sm text-white/70">
+          <li class="flex gap-3"><i class="fa-check tick"></i> Quarterly full re-audit + GA4 model re-fit</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> Google Ads structure + bid review</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> Dedicated senior auditor &amp; monthly touchpoint</li>
+          <li class="flex gap-3"><i class="fa-check tick"></i> AEO brand-visibility tracking, 6 months</li>
+        </ul>
+        <span class="mt-8 text-center rounded-full border border-white/20 py-4 text-sm font-semibold">Build my piling plan</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTS: CASE STUDIES ============ -->
+<section id="results" class="px-5 pb-20 bg-[var(--moss-deep)] text-[var(--cream)]">
+  <div class="max-w-6xl mx-auto rounded-[36px] bg-[linear-gradient(160deg,#22362B,#131A17)] p-7 md:p-12 card-soft relative overflow-hidden grain !rounded-[40px]">
+    <div class="eyebrow text-[var(--amber)]">Results · Page 04</div>
+    <h2 class="serif display text-[clamp(1.7rem,3.2vw,2.8rem)] mt-3 leading-[1]">Numbers we stake our name on.</h2>
+
+    <div class="grid md:grid-cols-3 gap-5 mt-8">
+      <article class="rounded-[26px] bg-white/[.06] backdrop-blur p-7 ring-1 ring-white/10">
+        <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[.25em] text-[var(--amber)]">Skincare · DTC</span><i class="fa-arrow-up-right"></i></div>
+        <h3 class="serif text-2xl mt-4">Meridian Skincare</h3>
+        <div class="flex gap-6 mt-6">
+          <div><p class="serif text-4xl">+31%</p><p class="text-xs text-white/50 uppercase tracking-widest mt-1">Conversion</p></div>
+          <div><p class="serif text-4xl">−38%</p><p class="text-xs text-white/50 uppercase tracking-widest mt-1">LCP time</p></div>
+        </div>
+        <p class="text-sm text-white/60 mt-5 leading-6">“They found 6 revenue leaks we’d been meaning to fix for a year. The Ads structure review paid for itself in five weeks.”</p>
+        <footer class="mt-6 text-sm">Amara Chen — Founder, <span class="text-[var(--amber)]">COO</span></footer>
+      </article>
+      <article class="rounded-[26px] bg-[var(--amber)] p-7 text-[var(--ink)]">
+        <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[.25em]">B2B SaaS</span><i class="fa-arrow-up-right"></i></div>
+        <h3 class="serif text-2xl mt-4">Northledger</h3>
+        <div class="flex gap-6 mt-6">
+          <div><p class="serif text-4xl">+52%</p><p class="text-xs uppercase tracking-widest mt-1 opacity-60">Qualified demo requests</p></div>
+          <div><p class="serif text-4xl">9 mo</p><p class="text-xs uppercase tracking-widest mt-1 opacity-60">AEO visibility gain</p></div>
+        </div>
+        <p class="text-sm mt-5 leading-6 opacity-80">“GA4 audit caught attribution chaos before we spent another £40k on ads. This is the first agency work that reads like finance.”</p>
+        <footer class="mt-6 text-sm font-semibold">Daniel Okafor — Head of Growth</footer>
+      </article>
+      <article class="rounded-[26px] overflow-hidden relative ring-1 ring-white/10">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=70" alt="Laptop showing performance report" loading="lazy" class="absolute inset-0 size-full object-cover grayscale opacity-90">
+        <div class="absolute inset-0 bg-gradient-to-b from-[rgba(19,26,23,.3)] via-[rgba(19,26,23,.65)] to-[rgba(19,26,23,.96)]"></div>
+        <div class="relative p-7 h-full flex flex-col justify-end" >
+          <div class="rounded-[22px] bg-[rgba(250,247,241,.96)] p-5 mb-6 card-soft" style="background-color: #f1e7e78f;">
+            <p class="text-[11px] uppercase tracking-[.25em] text-[#5B6B60]">Audit preview · sample</p>
+            <div class="h-2 w-4/5 rounded bg-[#E06C5B] mt-4"></div>
+            <div class="h-2 w-3/5 rounded bg-[#C9A15A] mt-3"></div>
+            <div class="h-2 w-2/3 rounded bg-[#33503F] mt-3"></div>
+            <p class="text-xs mt-4 text-[#33413A]">“Finding 07 — hero image pushed LCP 4.8s → 2.1s after AVIF + fetchpriority.”</p>
+          </div>
+          <h3 class="serif text-2xl">Fontaine Law</h3>
+          <p class="text-sm text-white/60 mt-3">Boutique legal — organic leads <span class="text-[var(--amber)] font-semibold">+44% in 6 months</span> after full AEO + schema stack.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- client logos -->
+    <div aria-label="Trusted by" class="flex gap-3 overflow-x-auto no-scrollbar mt-8">
+      <!-- -->
+      <a href="#checkout" aria-label="Meridian Skincare" class="chip shrink-0 rounded-full px-6 py-4 text-sm text-white/60 hover:text-[var(--amber)] transition">Meridian®</a>
+      <a href="#checkout" aria-label="Northledger" class="chip shrink-0 rounded-full px-6 py-4 text-sm text-white/60 hover:text-[var(--amber)] transition">Northledger</a>
+      <a href="#checkout" aria-label="Fontaine Law" class="chip shrink-0 rounded-full px-6 py-4 text-sm text-white/60 hover:text-[var(--amber)] transition">Fontaine Law</a>
+      <a href="#checkout" aria-label="Bloom Atelier" class="chip shrink-0 rounded-full px-6 py-4 text-sm text-white/60 hover:text-[var(--amber)] transition">Bloom Atelier</a>
+      <a href="#checkout" aria-label="Halden Health" class="chip shrink-0 rounded-full px-6 py-4 text-sm text-white/60 hover:text-[var(--amber)] transition">Halden Health</a>
+      <a href="#checkout" aria-label="Studio Norm" class="chip shrink-0 rounded-full px-6 py-4 text-sm text-white/60 hover:text-[var(--amber)] transition">Studio Norm</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section class="px-5 py-14 bg-[var(--cream)]">
+  <figure class="max-w-4xl mx-auto text-center">
+    <blockquote class="serif italic display text-[clamp(1.25rem,2.3vw,1.9rem)] leading-[1.12]">“I stopped arguing with agencies. Atlas is the first one that brings me a number, shows me the pixel, and lets me decide in one meeting. It quietly becomes the line item that pays for itself.”</blockquote>
+    <figcaption class="mt-6 text-sm uppercase tracking-[.25em] text-[#5B6B60]">Ingrid Voss — Managing Partner, Berg & Hale · €11k recovered, year one</figcaption>
+  </figure>
+</section>
+
+<!-- ============ GUARANTEE ============ -->
+<section class="px-5 pb-16 bg-[var(--cream)]">
+  <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 rounded-[32px] bg-gradient-to-r from-[#E7D3B3] via-[#C9A15A] to-[#9CAF9E] p-8 card-soft">
+    <div class="text-center sm:text-left">
+      <h2 class="serif display text-[clamp(1.4rem,2.4vw,2rem)] leading-none">If the plan doesn’t move one number we promised — you pay nothing.</h2>
+      <p class="text-sm text-[#33413A] mt-3">90-day re-measure, free, included. No questions, no retainer, no guilt.</p>
+    </div>
+    <a href="#checkout" class="shrink-0 rounded-full bg-[var(--ink)] text-[var(--cream)] px-8 py-5 text-sm font-semibold transition hover:bg-[var(--moss)]">Claim the guarantee</a>
+  </div>
+</section>
+
+<!-- ============ FAQ (Page 04) ============ -->
+<section id="faq" class="px-5 pb-20 bg-[var(--cream-2)]">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center">
+      <p class="eyebrow text-[var(--amber)]">Objection handling · Page 04</p>
+      <h2 class="serif display text-[clamp(1.6rem,3vw,2.5rem)] mt-3">Before you ask.</h2>
+    </div>
+    <div id="faqList" class="mt-8"></div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2 · SERVICES DETAIL ============ -->
+<section id="services-detail" class="px-5 py-14 bg-[var(--paper)] border-y border-[var(--line)]">
+  <div class="max-w-6xl mx-auto">
+    <header class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="eyebrow text-[var(--amber)]">Page 02 · Services, modular</p>
+        <h2 class="serif display text-[clamp(1.7rem,3vw,2.5rem)] mt-3">Each one is a deliverable, not a discovery call.</h2>
+      </div>
+    </header>
+    <div id="serviceDetail" class="divide-y divide-[var(--line)] mt-8"></div>
+  </div>
+</section>
+
+<!-- ============ PAGE 3 · COMPARISON ============ -->
+<section aria-label="Full pricing comparison" class="px-5 py-16 bg-[var(--ink)] text-[var(--cream)]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="serif display text-[clamp(1.5rem,2.6vw,2.2rem)] text-center">The whole picture, side by side.</h2>
+    <div class="overflow-x-auto no-scrollbar mt-8">
+      <table class="w-[820px] min-w-[820px] mx-auto border-separate border-spacing-y-3 text-sm">
+        <tbody id="compareRows"></tbody>
+      </table>
+    </div>
+    <div class="text-center mt-8">
+      <a href="#checkout" class="rounded-full bg-[var(--amber)] text-[var(--ink)] px-10 py-5 text-sm font-bold uppercase tracking-[.2em]">Buy Standard — £480 · 14-day turnaround</a>
+      <p class="text-xs text-white/40 mt-4">VAT optional where applicable. Cancel anytime on Revenue Partner — your last report stays yours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE 5 · CHECKOUT ============ -->
+<section id="checkout" class="px-5 py-14 bg-[linear-gradient(180deg,#FAF7F1,#F3EFE7)]">
+  <div class="max-w-5xl mx-auto">
+    <header class="text-center">
+      <p class="eyebrow text-[var(--amber)]">Page 05 · Checkout / Book Now</p>
+      <h2 class="serif display text-[clamp(1.8rem,3.2vw,2.8rem)] mt-3 leading-none">Start with 15 minutes of clarity. Pay with confidence.</h2>
+    </header>
+    <div class="grid lg:grid-cols-[1fr_1.1fr] gap-6 mt-10">
+      <!-- Calendly style -->
+      <a href="#checkout" aria-label="Schedule your free consultation" class="group rounded-[30px] bg-[var(--paper)] p-7 hairline card-soft flex flex-col gap-4 order-2 lg:order-1">
+        <h3 class="text-sm font-semibold uppercase tracking-[.25em] text-[#5B6B60]">Book the free call — Calendly style</h3>
+        <div class="grid grid-cols-3 gap-3" id="slots"></div>
+        <a href="#checkout" class="mt-2 text-center rounded-full border border-[var(--ink)] py-5 text-sm font-semibold transition group-hover:bg-[var(--ink)] group-hover:text-[var(--cream)]">Tue 14 May · 15:30 · with Amara</a>
+        <div class="rounded-3xl bg-[var(--ink)] text-[var(--cream)] p-6 mt-4 relative overflow-hidden grain">
+          <h4 class="serif italic text-xl">“If I book, I own the outcome. Audit lands in 14 days.”</h4>
+          <p class="text-sm text-white/50 mt-3">Ingrid V., Berg &amp; Hale — average book-to-report: 13.6 days.</p>
+          <a href="#checkout" class="inline-block mt-5 rounded-full bg-[var(--amber)] text-[var(--ink)] px-7 py-4 text-xs font-bold uppercase tracking-[.2em]">Claim the call slot</a>
+        </div>
+      </a>
+      <!-- Stripe style -->
+      <div class="rounded-[30px] bg-[#10161 3] bg-[#101613] p-6 text-[var(--cream)] card-soft ring-1 ring-white/10 order-1 lg:order-2 relative overflow-hidden grain lg:sticky lg:top-28 self-start">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-semibold uppercase tracking-[.25em] text-white/50">Secure checkout — Stripe style</h3>
+          <span class="chip !border-white/10 rounded-full px-4 py-2 text-[11px] uppercase tracking-[.2em] text-emerald-300 flex items-center gap-2"><span class="size-1.5 rounded-full bg-emerald-400"></span> 256-bit SSL · PCI DSS</span>
+        </div>
+        <div class="mt-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="serif text-2xl">Atlas Standard Audit</h4>
+              <p class="text-sm text-white/50 mt-1">All six disciplines · GA4 + Ads · 45-min walkthrough · 90-day re-measure</p>
+            </div>
+            <div class="text-right"><p class="serif text-3xl text-[var(--amber)]">£480</p><s class="text-sm text-white/40">£620</s></div>
+          </div>
+          <ul class="mt-5 grid sm:grid-cols-2 gap-3 text-xs text-white/60" id="checkoutChecklist"></ul>
+        </div>
+        <form onsubmit="return false" aria-label="Customer details" class="mt-6 space-y-4">
+          <input required type="text" placeholder="Full name" aria-label="Full name" class="w-full rounded-2xl bg-white/5 ring-1 ring-white/10 px-5 py-4 text-sm placeholder:text-white/30 outline-none focus:ring-2 focus:ring-[var(--amber)]">
+          <input required type="email" placeholder="Work email" aria-label="Work email" class="w-full rounded-2xl bg-white/5 ring-1 ring-white/10 px-5 py-4 text-sm placeholder:text-white/30 outline-none focus:ring-2 focus:ring-[var(--amber)]">
+          <input required type="text" inputmode="numeric" placeholder="Card number — 4242 4242 4242 4242" aria-label="Card number" class="w-full rounded-2xl bg-white/5 ring-1 ring-white/10 px-5 py-4 text-sm placeholder:text-white/30 outline-none focus:ring-2 focus:ring-[var(--amber)]">
+          <div class="grid grid-cols-2 gap-4">
+            <input required type="text" placeholder="Expiry · MM/YY" aria-label="Expiry" class="w-full rounded-2xl bg-white/5 ring-1 ring-white/10 px-5 py-4 text-sm placeholder:text-white/30 outline-none focus:ring-2 focus:ring-[var(--amber)]">
+            <input required type="text" inputmode="numeric" placeholder="CVC" aria-label="CVC" class="w-full rounded-2xl bg-white/5 ring-1 ring-white/10 px-5 py-4 text-sm placeholder:text-white/30 outline-none focus:ring-2 focus:ring-[var(--amber)]">
+          </div>
+          <button type="submit" class="w-full rounded-full bg-[var(--amber)] py-6 text-sm font-bold uppercase tracking-[.2em] text-[var(--ink)] transition hover:opacity-95">Pay £480 · Buy Atlas Standard</button>
+          <p class="text-center text-[11px] text-white/40">You won’t be charged today unless you book — 7-day money-back guarantee applies in full, no questions.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- confirmation state -->
+    <div class="mt-10 rounded-[30px] border border-emerald-500/30 bg-emerald-500/10 p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center gap-4">
+        <span class="grid size-12 place-items-center rounded-full bg-emerald-400/20 ring-1 ring-emerald-300/40"><i class="fa-check text-emerald-300"></i></span>
+        <div>
+          <h3 class="serif text-xl">Confirmation is already drafted — Acme Skincare · order #A-2417</h3>
+          <p class="text-sm text-[#33413A]/80 opacity-80">Report skeleton + 45-min walkthrough calendar link are on their way to your inbox in 24 hours.</p>
+        </div>
+      </div>
+      <a href="#checkout" class="shrink-0 rounded-full bg-[var(--ink)] text-[var(--cream)] px-7 py-4 text-sm font-semibold">Download the sample report</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[var(--ink)] text-[var(--cream)] px-5 pt-14 pb-8 border-t border-white/5">
+  <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
+    <div>
+      <a href="#home" class="flex items-center gap-3">
+        <svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-label="Atlas Audit logo"><rect width="34" height="34" rx="10" fill="#C9A15A"/><path d="M10 24V10h9a4.5 4.5 0 0 1 0 9h-5" stroke="#131A17" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.2" fill="#131A17"/></svg>
+        <span class="serif text-lg">Atlas Audit</span>
+      </a>
+      <p class="max-w-[38ch] text-sm text-white/50 leading-6 mt-5">Evidence-led website intelligence for teams that decide quickly. Performance, SEO, UX, AEO, GA4 and Ads — priced like engineering, not theater.</p>
+      <div style="display:flex;gap:12px;margin-top:24px;">
+
+      <!-- X / Twitter -->
+      <a href="#home"
+         aria-label="X / Twitter"
+         style="width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.1);border-radius:50%;color:#fff;text-decoration:none;font-size:18px;transition:all .3s ease;"
+         onmouseover="this.style.background='var(--amber)';this.style.color='var(--ink)'"
+         onmouseout="this.style.background='transparent';this.style.color='#fff'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.963 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="#home"
+         aria-label="LinkedIn"
+         style="width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.1);border-radius:50%;color:#fff;text-decoration:none;font-size:18px;transition:all .3s ease;"
+         onmouseover="this.style.background='var(--amber)';this.style.color='var(--ink)'"
+         onmouseout="this.style.background='transparent';this.style.color='#fff'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.605 0 4.267 2.373 4.267 5.461v6.28ZM5.337 7.433a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123ZM3.555 20.452h3.564V9H3.555v11.452Z"/>
+        </svg>
+      </a>
+
+      <!-- YouTube -->
+      <a href="#home"
+         aria-label="YouTube"
+         style="width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.1);border-radius:50%;color:#fff;text-decoration:none;font-size:18px;transition:all .3s ease;"
+         onmouseover="this.style.background='var(--amber)';this.style.color='var(--ink)'"
+         onmouseout="this.style.background='transparent';this.style.color='#fff'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M23.498 6.186a2.998 2.998 0 0 0-2.112-2.123C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.386.563A2.998 2.998 0 0 0 .502 6.186C0 8.075 0 12 0 12s0 3.925.502 5.814a2.998 2.998 0 0 0 2.112 2.123C4.495 20.5 12 20.5 12 20.5s7.505 0 9.386-.563a2.998 2.998 0 0 0 2.112-2.123C24 15.925 24 12 24 12s0-3.925-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/>
+        </svg>
+      </a>
+
+    </div>
+    
+    </div>
+    <nav aria-label="Services">
+      <h3 class="text-[11px] uppercase tracking-[.3em] text-white/40">Services</h3>
+      <a href="#services" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">Performance Analysis</a>
+      <a href="#services" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">SEO Audit</a>
+      <a href="#services" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">UI/UX Audit</a>
+      <a href="#services" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">AEO Audit</a>
+      <a href="#services" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">GA4 Audit</a>
+      <a href="#services" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">Google Ads Audit</a>
+    </nav>
+    <nav aria-label="Navigation">
+      <h3 class="text-[11px] uppercase tracking-[.3em] text-white/40">Microsite</h3>
+      <a href="#home" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">Home</a>
+      <a href="#services-detail" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">Services</a>
+      <a href="#pricing" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">Pricing</a>
+      <a href="#results" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">Results</a>
+      <a href="#checkout" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">Book &amp; Buy</a>
+    </nav>
+    <div>
+      <h3 class="text-[11px] uppercase tracking-[.3em] text-white/40">Contact &amp; Legal</h3>
+      <a href="#checkout" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">hello@atlas.audit</a>
+      <a href="#checkout" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">+44 20 7946 0810</a>
+      <a href="#checkout" class="block py-3 text-sm text-white/60 hover:text-[var(--amber)] transition">12 Ledger Square, London</a>
+      <div class="mt-6 flex gap-3">
+        <a href="#home" class="rounded-full border border-white/10 px-4 py-3 text-xs text-white/50 transition hover:text-[var(--amber)]">Privacy Policy</a>
+        <a href="#home" class="rounded-full border border-white/10 px-4 py-3 text-xs text-white/50 transition hover:text-[var(--amber)]">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/5 mt-10 pt-7 text-[11px] uppercase tracking-[.25em] text-white/35">
+    <p>© 2026 Atlas Audit Ltd — Independent, partner-paid free. All rights reserved. Developed by Zannatul.</p>
+    <a href="#checkout" class="text-[var(--amber)]">Same-week report · 412 delivered · 0 refunds requested</a>
+  </div>
+</footer>
+
+<script>
+const services=[
+ {n:'01',t:'Website Performance Analysis',b:'Core web vitals, render path, asset weight, image strategy.',f:'Finding 07 — LCP hero 4.8s → 2.1s after AVIF + fetchpriority.',p:'from £120 · inside Standard',i:'fa-gauge-high'},
+ {n:'02',t:'SEO Audit',b:'Indexability, intent, schema, internal links, content decay.',f:'Finding 03 — 14 pages competing with homepage for “audit”.',p:'from £140 · inside Standard',i:'fa-magnifying-glass'},
+ {n:'03',t:'UI/UX Audit',b:'Heat-strip logic, type hierarchy, mobile thumb zones, wireframe rehearsal.',f:'Finding 11 — CTA contrast 2.4:1 fails WCAG AA by step.',p:'from £130 · inside Standard',i:'fa-bezier-curve'},
+ {n:'04',t:'AEO Audit',b:'Answer Engine optimization — schema stack, citations, Entity consistency.',f:'Finding 02 — 9 missing FAQPage schema on top 5 queries.',p:'from £110 · inside Standard',i:'fa-robot'},
+ {n:'05',t:'GA4 Audit',b:'Tracking health, attribution model chaos, conversion teardown.',f:'Finding 01 — 37% of conversions lost to attribution gaps.',p:'from £100 · inside Standard',i:'fa-chart-line'},
+ {n:'06',t:'Google Ads Audit',b:'Structure, match types, bid logic, wasted spend outside brand.',f:'Finding 05 — £8.2k/mo spend, 28% wasted, no guardrails.',p:'from £150 · on Revenue Partner',i:'fa-bullseye'}
+];
+document.getElementById('svc').innerHTML=services.map(s=>`
+ <a href="#checkout" aria-label="Buy ${s.t}" class="group relative overflow-hidden rounded-[30px] bg-[var(--paper)] p-6 hairline card-soft card-lift flex flex-col justify-between">
+  <div class="absolute -right-4 -top-4 size-32 rounded-full bg-gradient-to-br from-[#E7D3B3] via-[#C9A15A]/30 to-transparent blur-2xl transition-opacity duration-500 opacity-70 group-hover:opacity-100"></div>
+  <div class="relative flex-1 flex flex-col">
+    <div class="flex items-center justify-between">
+      <span class="serif italic text-6xl text-transparent [-webkit-text-stroke:1px_#9CAF9E]" style="-webkit-text-stroke:1px #C9A15A">${s.n}</span>
+      <span class="grid size-14 place-items-center rounded-2xl bg-[var(--ink)] text-[var(--amber)] transition-transform duration-500 group-hover:rotate-6"><i class="${s.i} text-lg"></i></span>
+    </div>
+    <h3 class="serif display text-[1.55rem] leading-[1.02] mt-7">${s.t}</h3>
+    <p class="text-sm leading-6 text-[#5B6B60] mt-4">${s.b}</p>
+    <div class="rounded-2xl bg-[var(--cream-2)] p-4 mt-6 ring-1 ring-[var(--line)]">
+      <p class="text-[11px] uppercase tracking-[.22em] text-[#5B6B60]">Sample finding</p>
+      <p class="text-sm font-medium text-[var(--ink)] mt-2 leading-5">${s.f}</p>
+    </div>
+  </div>
+  <div class="relative flex items-center justify-between mt-7 pt-6 border-t border-[var(--line)]">
+    <span class="text-xs font-semibold uppercase tracking-[.2em] text-[var(--amber)]">${s.p}</span>
+    <span class="inline-flex items-center gap-3 rounded-full bg-[var(--ink)] text-[var(--cream)] px-6 py-4 text-xs font-bold uppercase tracking-[.2em] transition group-hover:bg-[var(--moss)]">Buy Audit <i class="fa-arrow-up-right transition-transform group-hover:rotate-12"></i></span>
+  </div>
+ </a>`).join('');
+
+document.getElementById('steps').innerHTML=[
+ ['01','Evidence intake','Access + analytics snapshot. We pre-read your GA4 before we ever call you.'],
+ ['02','Two-week read','Every discipline, live. No dashboards you’ll never open — findings, severity, effort.'],
+ ['03','Live walkthrough','45 minutes. You leave knowing exactly what to fix this quarter and what not to touch.'],
+ ['04','90-day re-measure','We track the lift you chose to implement. If we miss the number, you pay nothing.']
+].map((s,i)=>`
+ <a href="#checkout" aria-label="${s[1]} step" class="group relative rounded-[26px] bg-white/[.05] p-6 ring-1 ring-white/10 backdrop-blur transition hover:bg-white/10">
+   <span class="serif italic text-5xl text-[var(--amber)]">${s[0]}</span>
+   <div class="my-5 h-px bg-gradient-to-r from-[var(--amber)] to-transparent"></div>
+   <h3 class="serif text-xl leading-tight">${s[1]}</h3>
+   <p class="text-sm text-white/55 leading-6 mt-3">${s[2]}</p>
+   <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[.2em] text-[var(--amber)] mt-6">See delivery <i class="fa-arrow-right transition-transform group-hover:translate-x-1"></i></span>
+ </a>`).join('');
+
+document.getElementById('serviceDetail').innerHTML=services.map(s=>`
+ <a href="#checkout" aria-label="Buy ${s.t}" class="flex flex-col sm:flex-row sm:items-center gap-6 py-8 group">
+   <span class="grid size-16 shrink-0 place-items-center rounded-3xl bg-[var(--ink)] text-[var(--amber)] group-hover:rotate-3 transition-transform"><i class="${s.i} text-xl"></i></span>
+   <div class="flex-1">
+     <h3 class="serif display text-2xl md:text-3xl group-hover:italic decoration-[var(--amber)] underline-offset-4">${s.t}</h3>
+     <p class="text-sm text-[#5B6B60] mt-2 leading-6 max-w-[52ch]">${s.b}</p>
+     <p class="text-sm font-medium text-[var(--moss)] mt-3">▸ ${s.f}</p>
+   </div>
+   <div class="flex items-center gap-6">
+     <span class="hidden md:block text-xs font-semibold uppercase tracking-[.2em] text-[var(--amber)]">${s.p}</span>
+     <span class="rounded-full bg-[var(--amber)] text-[var(--ink)] px-7 py-4 text-xs font-bold uppercase tracking-[.2em] transition group-hover:opacity-95">Buy Audit</span>
+   </div>
+ </a>`).join('');
+
+const faqs=[
+ ['What is the real price — and why “fixed”?','A fixed price, always. Optional implementation is priced separately and never hidden inside the audit.'],
+ ['How long is turnaround from intake to report?','14 days standard. You get a live skeleton after day 3; the full evidence pack lands by day 14.'],
+ ['What do I need to give you access to?','Analytics read-only, Search Console verification, GA4 read-only. Devtools screenshots are usually enough for technical flags. Never destructive.'],
+ ['What exactly do I get in the deliverable?','Every finding — severity, evidence, effort, expected impact — plus a visually graded PDF, prioritized 90-day roadmap, and one live call.'],
+ ['Can you compare me against my competitors?','Yes. We re-run the same audit on 3 closest competitors and grade you head-to-head.'],
+ ['What happens if we miss a promise?','The 90-day re-measure is included. If we miss the number we committed in writing, you pay nothing for the remediation follow-up.'],
+ ['What is the next step after I buy?','15-min intake (booked from checkout), access instructions in 24 hours, skeleton day 3, report day 14, call day 15.']
+];
+document.getElementById('faqList').innerHTML=faqs.map((f,i)=>`
+ <a href="#checkout" aria-label="Read more: ${f[0]}" class="faq-q block py-7 group">
+   <div class="flex items-center justify-between gap-6">
+     <h3 class="serif display text-xl md:text-2xl group-hover:italic decoration-[#C9A15A] underline-offset-4">${f[0]}</h3>
+     <span class="grid size-11 shrink-0 place-items-center rounded-full border border-[var(--line)] text-lg text-[var(--amber)] transition-transform group-hover:rotate-90 group-hover:bg-[var(--ink)] group-hover:text-[var(--cream)]"><i class="fa-plus"></i></span>
+   </div>
+   <p class="text-sm text-[#5B6B60] leading-6 mt-3 max-w-[62ch]">${f[1]}</p>
+ </a>`).join('');
+
+document.getElementById('compareRows').innerHTML=[
+ ['All six disciplines','—','✓','✓'],
+ ['GA4 teardown + Ads structure','—','✓','✓'],
+ ['AEO schema + competitor re-run','—','—','✓'],
+ ['Live 45-min walkthrough','—','✓','✓'],
+ ['Quarterly / monthly re-measure','—','—','✓'],
+ ['90-day re-measure guarantee','✓','✓','✓'],
+ ['Price','£240 fixed','£480 fixed','£940 / quarter']
+].map(r=>`
+ <tr>
+  <td class="rounded-l-2xl bg-white/[.05] ring-1 ring-white/10 px-5 py-5 text-white/70">${r[0]}</td>
+  <td class="bg-white/[.05] ring-y ring-white/10 px-5 py-5 text-center text-white/50">${r[1]}</td>
+  <td class="bg-[#33503F] ring-y ring-[#C9A15A66] px-5 py-5 text-center font-semibold text-[#E7D3B3]">${r[2]}</td>
+  <td class="rounded-r-2xl bg-white/[.05] ring-1 ring-white/10 px-5 py-5 text-center text-white/80">${r[3]}</td>
+ </tr>`).join('');
+
+document.getElementById('slots').innerHTML=['Tue 14','Wed 15','Thu 16','Fri 17','Mon 20','Tue 21','Wed 22','Thu 23','Fri 24'].map((d,i)=>`
+ <a href="#checkout" aria-label="Available slot ${d}" class="rounded-3xl border ${i===1?'border-[var(--amber)] bg-[#C9A15A]/10':'border-[var(--line)] bg-[var(--paper)]'} p-4 text-center transition hover:-translate-y-1 hover:shadow-xl">
+   <p class="text-[11px] uppercase tracking-[.2em] text-[#5B6B60]">${d.split(' ')[0]}</p>
+   <p class="serif text-2xl mt-1">${d.split(' ')[1]}</p>
+   <span class="mt-3 inline-block rounded-full ${i===1?'bg-[var(--amber)] text-[var(--ink)]':'bg-[var(--ink)] text-[var(--cream)]'} px-4 py-2 text-[11px] font-bold uppercase tracking-[.2em]">${i===1?'Next · 15:30':'Open'}</span>
+ </a>`).join('');
+
+document.getElementById('checkoutChecklist').innerHTML=['All six disciplines','GA4 + Ads teardown','45-min live call','90-day re-measure','Evidence PDF · 24pp','Prioritized roadmap'].map(x=>`<li class="flex items-center gap-3 rounded-2xl bg-white/5 ring-1 ring-white/10 px-4 py-3"><i class="fa-check text-[var(--amber)] text-xs"></i><span>${x}</span></li>`).join('');
+</script>
+
+</body>
+</html>
